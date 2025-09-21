@@ -183,7 +183,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Shayan Kazi**
 - GitHub: [@Shayankazi](https://github.com/Shayankazi)
-- 
+
 **Vansh Talyani**
 - GitHub: [@Vanshtalyani](https://github.com/VANSHTalyani)
 
