@@ -1,0 +1,593 @@
+@import url("https://fonts.cdnfonts.com/css/gang-of-three");
+@import "tailwindcss";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(202, 61, 45, 0.6) 40%,
+      rgb(75, 0, 0) 99.9%
+    ),
+    url("/images/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  overflow-y: scroll; /* or auto — to allow scroll */
+  scroll-behavior: auto;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+body .noscroll {
+  overflow: hidden !important;
+  height: 100vh;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(202, 61, 45, 0.6) 40%,
+      rgb(75, 0, 0) 99.9%
+    ),
+    url("/images/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+#wood {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.6));
+}
+
+#wood > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.clone {
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.6));
+}
+
+#bowls {
+  filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.6));
+  position: absolute;
+  top: 87%;
+  left: 87%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  /* transform: rotate(); */
+  pointer-events: none;
+}
+
+#bowls img {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.3s ease;
+}
+
+#hero {
+  width: 33vw;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  position: absolute;
+  top: 1.2rem;
+}
+
+#hero h5 {
+  font-family: "Gang of Three", sans-serif;
+}
+
+#hero h1 {
+  font-family: "Gang of Three", sans-serif;
+  color: rgba(255, 221, 181, 0.788);
+}
+
+#hero #r {
+  font-family: "Gang of Three", sans-serif;
+  color: rgba(255, 221, 181, 0.788);
+  font-size: 7.3rem;
+  line-height: 0.6;
+}
+
+
+#about {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Gang of Three", sans-serif;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(202, 61, 45, 0.6) 40%,
+      rgb(75, 0, 0) 99.9%
+    ),
+    url("/images/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+#left {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+#bowlTarget {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  top: 45%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+}
+
+/* Image/Video placeholders for feature sections */
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+}
+
+.image-placeholder:hover {
+  transform: scale(1.02);
+}
+
+.image-placeholder span {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Different gradient backgrounds for each placeholder */
+.search-placeholder {
+  background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+}
+
+.ai-placeholder {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.nutrition-placeholder {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.scaling-placeholder {
+  background: linear-gradient(135deg, #f5576c 0%, #4facfe 100%);
+}
+
+/* Try Now Buttons */
+.try-now-btn {
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: "Gang of Three", sans-serif;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.try-now-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+  z-index: -1;
+}
+
+.try-now-btn:hover::before {
+  left: 100%;
+}
+
+.try-now-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Unified button theme for all Try Now buttons */
+.search-btn,
+.ai-btn,
+.nutrition-btn,
+.scaling-btn {
+  background: linear-gradient(135deg, #ffdd80 0%, #ff8c42 100%);
+  color: #2c1810;
+  font-weight: 700;
+  text-shadow: none;
+  border: 2px solid rgba(255, 221, 128, 0.3);
+}
+
+.search-btn:hover,
+.ai-btn:hover,
+.nutrition-btn:hover,
+.scaling-btn:hover {
+  background: linear-gradient(135deg, #ff8c42 0%, #ffdd80 100%);
+  border-color: rgba(255, 140, 66, 0.5);
+  color: #1a0f08;
+}
+
+#right {
+  padding: 8vh 2vw;
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+#right h1 {
+  font-size: 5rem;
+}
+
+#right h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+#right p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Feature Sections */
+.feature-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gang of Three", sans-serif;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.feature-content {
+  display: flex !important;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4rem;
+  gap: 4rem;
+  flex-direction: row !important;
+}
+
+/* Specific targeting for reverse sections */
+#ai-feature .feature-content,
+#scaling-feature .feature-content {
+  flex-direction: row-reverse !important;
+}
+
+/* Remove debug borders for clean continuous look */
+
+/* Ensure no gaps between sections */
+.feature-section + .feature-section {
+  margin-top: 0;
+  border-top: none;
+}
+
+/* Remove any potential spacing issues */
+#main {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.w-full.h-screen {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+/* Ensure no gaps between major sections */
+#home, #about, .feature-section {
+  margin: 0 !important;
+  padding: 0;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove any potential black lines */
+#home + #about,
+#about + .feature-section,
+.feature-section + .feature-section {
+  margin-top: 0 !important;
+  border-top: none !important;
+}
+
+.feature-text {
+  flex: 1;
+  padding: 2rem;
+  z-index: 2;
+}
+
+.feature-text h2 {
+  font-size: 4rem;
+  color: #ffdd80;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.feature-text h3 {
+  font-size: 2.2rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 2rem;
+  line-height: 1.3;
+}
+
+.feature-text p {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.feature-image {
+  flex: 1;
+  height: 70vh;
+  position: relative;
+  z-index: 1;
+}
+
+.feature-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.feature-media:hover {
+  transform: scale(1.02);
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.image-placeholder:hover {
+  transform: scale(1.02);
+}
+
+/* Background same as about section for all features */
+.feature-section {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(202, 61, 45, 0.6) 40%,
+      rgb(75, 0, 0) 99.9%
+    ),
+    url("/images/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+/* Parallax elements */
+.parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  z-index: 0;
+  will-change: transform;
+}
+
+/* Footer Styling */
+#footer {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(202, 61, 45, 0.8) 0%,
+      rgb(75, 0, 0) 100%
+    ),
+    url("/images/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Gang of Three", sans-serif;
+  padding: 4rem 0 2rem 0;
+  position: relative;
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand h2 {
+  font-size: 2.5rem;
+  color: #ffdd80;
+  margin-bottom: 1rem;
+}
+
+.footer-brand p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.footer-column h4 {
+  font-size: 1.4rem;
+  color: #ffdd80;
+  margin-bottom: 1.5rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-column ul li a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #ffdd80;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-social {
+  display: flex;
+  gap: 2rem;
+}
+
+.social-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #ffdd80;
+}
+
+.footer-copyright p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .footer-social {
+    justify-content: center;
+  }
+}

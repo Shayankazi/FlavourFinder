@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="main">
+      <div id="home" class="w-full h-screen">
+        <div id="hero" class="">
+          <h5 class="text-2xl flex items-center gap-1">
+            <img
+              width="50"
+              height="50"
+              src="https://img.icons8.com/ios/50/horizontal-line.png"
+              alt="horizontal-line"
+              class="invert"
+              />
+              indian
+              <img
+              width="50"
+              height="50"
+              src="https://img.icons8.com/ios/50/horizontal-line.png"
+              alt="horizontal-line"
+              class="invert"
+            />
+          </h5>
+          <h1 class="text-8xl">FLAVOR</h1>
+          <h1 id="r" class="">FINDER</h1>
+          <div id="wood">
+            <img src="./images/WOOD.png" alt="" />
+            <div id="bowls">
+              <img class="bowl-wrapper" src="./images/Ramen1.png" alt="" />
+              <img class="bowl-wrapper" src="./images/Ramen2.png" alt="" />
+              <img class="bowl-wrapper" src="./images/Ramen4.png" alt="" />
+              <img class="bowl-wrapper" src="./images/Ramen3.png" alt="" />
+              <img class="bowl-wrapper" src="./images/Ramen5.png" alt="" />
+              <img class="bowl-wrapper" src="./images/Ramen4.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="about" class="w-full h-screen">
+        <div id="left">
+          <div id="bowlTarget"></div>
+        </div>
+        <div id="right">
+          <h1>ABOUT</h1>
+          <h3>Discover the authentic taste of India with our premium Flavor Finder collection. Each dish is carefully crafted with traditional Indian techniques, featuring rich, aromatic spices and perfectly balanced flavors.</h3>
+          <p>From classic Biryani to spicy Curry, our recipe varieties offer a journey through India's diverse culinary landscape. Made with the finest ingredients and time-honored recipes, every dish delivers an unforgettable dining experience.</p>
+          <p>Whether you're craving comfort food or seeking culinary adventure, our Flavor Finder brings the soul of Indian cuisine directly to your table.</p>
+        </div>
+      </div>
+
+      <!-- Advanced Recipe Search Section -->
+      <div id="search-feature" class="feature-section w-full h-screen">
+        <div class="feature-content">
+          <div class="feature-text">
+            <h2>Advanced Recipe Search</h2>
+            <h3>Find Your Perfect Recipe</h3>
+            <p>Our robust search engine lets you discover recipes tailored to your exact needs. Filter by dietary restrictions like vegetarian, vegan, or gluten-free options.</p>
+            <p>Explore diverse cuisines from Italian classics to spicy Mexican dishes and aromatic Indian flavors. Need something quick? Search by cooking time - under 30 minutes for busy weeknights or longer recipes for weekend culinary adventures.</p>
+            <p>Find meals that perfectly fit your lifestyle, schedule, and taste preferences with just a few clicks.</p>
+            <button class="try-now-btn search-btn">Try Now</button>
+          </div>
+          <div class="feature-image">
+            <img src="/images/image1.jpg" alt="Recipe Search Feature" class="feature-media" />
+          </div>
+        </div>
+      </div>
+
+      <!-- AI-Powered Suggestions Section -->
+      <div id="ai-feature" class="feature-section w-full h-screen">
+        <div class="feature-content">
+          <div class="feature-image">
+            <img src="/images/image4.jpg" alt="AI Recipe Suggestions Feature" class="feature-media" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="image-placeholder ai-placeholder" style="display: none;">
+              <span>Image 4 (image4.jpg not found)</span>
+            </div>
+          </div>
+          <div class="feature-text">
+            <h2>AI-Powered Recipe Suggestions</h2>
+            <h3>Your Personal Culinary Assistant</h3>
+            <p>Our integrated AI system acts as your personal cooking companion, suggesting recipes based on ingredients you already have at home. Reduce food waste while discovering new flavor combinations.</p>
+            <p>The AI learns from your cooking history and preferences, providing increasingly personalized recommendations over time. The more you cook, the smarter your suggestions become.</p>
+            <p>Transform your kitchen ingredients into culinary masterpieces with intelligent, waste-reducing recipe suggestions.</p>
+            <button class="try-now-btn ai-btn">Try Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nutritional Analysis Section -->
+      <div id="nutrition-feature" class="feature-section w-full h-screen">
+        <div class="feature-content">
+          <div class="feature-text">
+            <h2>Nutritional Analysis</h2>
+            <h3>Make Informed Dietary Choices</h3>
+            <p>Every recipe features a comprehensive nutritional breakdown, including detailed calorie counts and complete macronutrient profiles covering proteins, carbohydrates, and healthy fats.</p>
+            <p>Discover essential vitamins and minerals in each dish, empowering you to make informed dietary decisions that align with your health and wellness goals.</p>
+            <p>Whether you're tracking fitness goals, managing dietary restrictions, or simply eating mindfully, our nutritional insights guide your culinary journey.</p>
+            <button class="try-now-btn nutrition-btn">Try Now</button>
+          </div>
+          <div class="feature-image">
+            <img src="/images/image2.jpg" alt="Nutrition Analysis Feature" class="feature-media" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="image-placeholder nutrition-placeholder" style="display: none;">
+              <span>Image 2 (image2.jpg not found)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recipe Scaling Section -->
+      <div id="scaling-feature" class="feature-section w-full h-screen">
+        <div class="feature-content">
+          <div class="feature-image">
+            <img src="/images/image3.jpg" alt="Recipe Scaling Feature" class="feature-media" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="image-placeholder scaling-placeholder" style="display: none;">
+              <span>Image 3 (image3.jpg not found)</span>
+            </div>
+          </div>
+          <div class="feature-text">
+            <h2>Recipe Scaling Calculator</h2>
+            <h3>Perfect Portions Every Time</h3>
+            <p>Easily adjust serving sizes with our intelligent scaling calculator. Whether you're cooking for one or hosting a dinner party, get perfectly proportioned ingredients every time.</p>
+            <p>Our system automatically updates all ingredient measurements and provides guidance on how cooking times might need adjustment, ensuring consistent and delicious results regardless of portion size.</p>
+            <p>Scale up for gatherings or down for intimate meals - achieve culinary perfection at any serving size.</p>
+            <button class="try-now-btn scaling-btn">Try Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Section -->
+      <footer id="footer" class="w-full">
+        <div class="footer-content">
+          <div class="footer-main">
+            <div class="footer-brand">
+              <h2>FLAVOR FINDER</h2>
+              <p>Authentic Indian flavors, crafted with tradition and innovation.</p>
+            </div>
+            
+            <div class="footer-links">
+              <div class="footer-column">
+                <h4>Features</h4>
+                <ul>
+                  <li><a href="#search-feature">Recipe Search</a></li>
+                  <li><a href="#ai-feature">AI Suggestions</a></li>
+                  <li><a href="#nutrition-feature">Nutrition Analysis</a></li>
+                  <li><a href="#scaling-feature">Recipe Scaling</a></li>
+                </ul>
+              </div>
+              
+              <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                  <li><a href="#about">About Us</a></li>
+                  <li><a href="#">Our Story</a></li>
+                  <li><a href="#">Careers</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+              
+              <div class="footer-column">
+                <h4>Support</h4>
+                <ul>
+                  <li><a href="#">Help Center</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms of Service</a></li>
+                  <li><a href="#">FAQ</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="footer-bottom">
+            <div class="footer-social">
+              <a href="#" class="social-link">Facebook</a>
+              <a href="#" class="social-link">Twitter</a>
+              <a href="#" class="social-link">Instagram</a>
+              <a href="#" class="social-link">YouTube</a>
+            </div>
+            <div class="footer-copyright">
+              <p>&copy; 2024 Flavor Finder. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
