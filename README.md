@@ -179,13 +179,13 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 👨‍💻 Author
 
 **Swayam Kewlani**
-- GitHub: [@Shayankazi](https://github.com/kswayam47)
+- GitHub: [@Swayamkewlani](https://github.com/kswayam47)
 
 **Shayan Kazi**
 - GitHub: [@Shayankazi](https://github.com/Shayankazi)
 - 
 **Vansh Talyani**
-- GitHub: [@Shayankazi](https://github.com/VANSHTalyani)
+- GitHub: [@Vanshtalyani](https://github.com/VANSHTalyani)
 
 ## 🙏 Acknowledgments
 
